@@ -15,16 +15,6 @@ page.xpath("//td[@class='cmc-table__cell cmc-table__cell--sortable cmc-table__ce
 
 page.xpath("//div[@class='sc-131di3y-0 cLgOOr']//span").each do |price| currency_prices << price.text[1..-1] end
 
-#def scrapper
-#    (0..100).each do |i|
-#        h = {currency_symbols[i]:, currency_prices[i]:}
-#        crypto_symbols_and_prices << h
-#    end
-#end
-
-#crypto_symbols_and_prices << currency_symbols << currency_prices
-
-#crypto_symbols_and_prices.map { |hash| hash = crypto_symbols_and_prices[0][i]}
 
 for i in 0..19
     k=currency_symbols[i]
@@ -34,6 +24,6 @@ end
 
 
 puts crypto_symbols_and_prices
-puts crypto_symbols_and_prices.class
+
 
 
