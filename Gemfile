@@ -1,0 +1,5 @@
+source "https://rubygems.org"
+ruby "2.7.4"
+gem "rubygems"
+gem "nokogiri"
+gem "open-uri"
