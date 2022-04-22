@@ -35,22 +35,27 @@ end
 
 
 def get_townhall_emails
-    get_townhall_urls
-    townhall_emails = []
-    townhall_urls.each do |url| townhall_emails << get_townhall_email(url)
+    urls = get_townhall_urls
+    townhall_emails =[]
+    urls.each do |url| townhall_emails << get_townhall_email(url)
     end
+   
+    return townhall_emails
 end
 
 
 def get_array_final
     array_final = []
-    for i in 0..10
-        k = get_townhall_names[i]
-        v = get_townhall_emails[i]
+    emails = get_townhall_emails
+    names = get_townhall_names
+    number = emails.count
+    for i in 0..number-1
+        k = names[i]
+        v = emails[i]
         array_final << Hash[k, v]
     end
 
-    return array_final
+    puts array_final
 end
 
-puts get_townhall_emails
+get_array_final
